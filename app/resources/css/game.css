@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    background-color: #4d5258;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.app {
+    width: 640px;
+    height: 480px;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.app_block {
+    border: 2px solid #000;
+    width: 200px;
+    height: 130px;
+    cursor: pointer;
+
+    font-size: 60px;
+    font-family: sans-serif;
+    font-weight: bold;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #202328;
+    border-radius: 10px;
+}
+.app_block.active {
+    cursor: default;
+}
+.app_block.active.active_o {
+    color: #e2e3e8;
+}
+.app_block.active.active_x {
+    color: #d64c42;
+}
+
+.modal {
+    display: none; /* По умолчанию скрыто */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4); /* Цвет фона с некоторой прозрачностью */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% от верхнего края, автоматические отступы по бокам */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Ширина модального окна */
+}
+
+.logout{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: red;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+.result{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
